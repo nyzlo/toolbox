@@ -40,4 +40,4 @@ Aiur
 Arakaali
 - Domain restriction logic is primitive
 - Only handles single URL input in its current itteration
-- No user-agent/ip rotation goin' on, susceptible to just getting blocked
+- Default Scrapy user-agent/no ip rotation goin' on, susceptible to just getting blocked
