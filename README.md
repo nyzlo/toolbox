@@ -28,14 +28,14 @@
 
 ### Restrictions
 General
-- All tools are designed for usage on Linux.
+- All tools are designed for usage on Linux
 
 Chen
-- Less potetent than already existing tools in the same category.
+- Less potetent than already existing tools in the same category
 
 Aiur
-- Performance is lacking and doesn't utilize threading/asynchronous calls.
+- Performance is lacking and doesn't utilize threading/asynchronous calls
 
 Arakaali
-- Domain restriction logic is primitive and won't do well with subdomains.
-- Only handles single URL input in its current itteration.
+- Domain restriction logic is primitive and won't do well with subdomains
+- Only handles single URL input in its current itteration
