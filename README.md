@@ -26,7 +26,7 @@
 ### Arakaali (spider)
 `python main.py arakaali https://www.inlanefreight.com`
 
-### Restrictions
+### Limitations
 General
 - All tools are designed for usage on Linux
 
