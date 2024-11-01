@@ -27,14 +27,15 @@
 `python main.py arakaali https://www.inlanefreight.com`
 
 ### Restrictions
-General:
-All tools are designed for usage on Linux.
+General
+- All tools are designed for usage on Linux.
 
-Chen:
-Less potetent than already existing tools in the same category.
+Chen
+- Less potetent than already existing tools in the same category.
 
-Aiur:
-Performance is lacking and doesn't utilize threading/asynchronous calls.
+Aiur
+- Performance is lacking and doesn't utilize threading/asynchronous calls.
 
-Arakaali:
-Domain restriction logic is primitive and won't do well with subdomains, and only handles single URL input in its current itteration.
+Arakaali
+- Domain restriction logic is primitive and won't do well with subdomains.
+- Only handles single URL input in its current itteration.
