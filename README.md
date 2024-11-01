@@ -32,6 +32,7 @@ General
 
 Chen
 - Less potetent than already existing tools in the same category
+- Susceptible to getting blocked, no rotation of ips/proxy usage
 
 Aiur
 - Performance is lacking and doesn't utilize threading/asynchronous calls
@@ -39,3 +40,4 @@ Aiur
 Arakaali
 - Domain restriction logic is primitive
 - Only handles single URL input in its current itteration
+- No user-agent/ip rotation goin' on, susceptible to just getting blocked
