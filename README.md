@@ -37,5 +37,5 @@ Aiur
 - Performance is lacking and doesn't utilize threading/asynchronous calls
 
 Arakaali
-- Domain restriction logic is primitive and won't do well with subdomains
+- Domain restriction logic is primitive
 - Only handles single URL input in its current itteration
