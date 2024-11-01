@@ -8,7 +8,7 @@ from modules.misc import Colors, save_results
 
 
 def run_chen(domain):
-    cleaned_domain = re.sub(r"https?://|www\.|/$", "", domain) # normalize input domain for better control of program behavior
+    cleaned_domain = re.sub(r"https?://|www\.|/$", "", domain) # normalize input domain to confirm to sublister, and for control of program behavior
 
     subdomains = sublist3r.main(cleaned_domain, 25, savefile=False, ports=None, silent=True, verbose=False, enable_bruteforce=False, engines=None)
 
@@ -39,7 +39,7 @@ def run_chen(domain):
         print(f"\n{Colors.YELLOW}Running Wappalyzer on alive subdomains~{Colors.RESET}")
         logging.info(f"Running Wappalyzer on alive subdomains")
         for subdomain in alive_subdomains:
-            https_fix = f"https://{subdomain}" #wappy wants https, sublister doesn't, what can u do
+            https_fix = f"https://{subdomain}" # wappy wants https, sublister doesn't, what can u do
             wappy_result = wappy(https_fix)
             full_wappy_results.append(f"[{subdomain}]\n{wappy_result}\n\n")
             print(f"{Colors.GREEN}\n[{subdomain}]{Colors.RESET}\n{wappy_result}")
