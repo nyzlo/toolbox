@@ -8,7 +8,7 @@ from modules.misc import Colors, save_results
 
 
 def run_chen(domain):
-    cleaned_domain = re.sub(r"https?://|www\.|/$", "", domain) # normalize input domain to confirm to sublister, and for control of program behavior
+    cleaned_domain = re.sub(r"https?://|www\.|/$", "", domain) # normalize input domain to confirm to sublister, and for better control of program behavior
 
     subdomains = sublist3r.main(cleaned_domain, 25, savefile=False, ports=None, silent=True, verbose=False, enable_bruteforce=False, engines=None)
 
