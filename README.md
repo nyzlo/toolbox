@@ -3,7 +3,7 @@
 ## Installation
 
 #### Requirements: Python 3
-- `git clone https://github.com/nyzlo/toolbox.git`
+- `git clone https://github.com/nyzlo/toolbox`
 - `cd toolbox`
 - `pip install -r requirements.txt`
 
