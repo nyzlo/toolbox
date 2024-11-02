@@ -9,7 +9,7 @@
 
 ## Usage
 ### Chen (subdomain & technology finder)
-`python main.py chen https://www.hackerone.com`
+`python main.py chen hackerone.com`
 ### Aiur (ssh & ftp bruteforcer)
 ```
 -H Host of the target: -H host
