@@ -10,6 +10,8 @@
 ## Usage
 ### Chen (subdomain & technology finder)
 `python main.py chen hackerone.com`
+- Incase of DNS error, ignore and let run. Tied to sublist3r lib:  
+https://github.com/aboul3la/Sublist3r/issues/189
 ### Arakaali (spider)
 `python main.py arakaali https://www.inlanefreight.com`
 ### Aiur (ssh & ftp bruteforcer)
@@ -41,3 +43,4 @@ Arakaali
 Aiur
 - Performance is lacking and doesn't utilize threading/asynchronous calls
 - Also likely to get blocked~
+
