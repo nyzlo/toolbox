@@ -11,6 +11,7 @@
 ### Chen (subdomain & technology finder)
 `python main.py chen hackerone.com`
 ### Aiur (ssh & ftp bruteforcer)
+#### Options
 ```
 -H Host of the target: -H host
 -s Service choice: -s ssh / ftp
@@ -18,26 +19,11 @@
 -L Username wordlist: -L path/to/wordlist
 -p Password: -p password
 -P Password wordlist: -P path/to/wordlist
--t Non-default port: -t X (default 22 ssh, 21 ftp when omitted -t flag)
+-t Non-default port: -t X (defaults to 22 with ssh, 21 with ftp when omitted -t flag)
 ```
+
 `python main.py aiur -H bandit.labs.overthewire.org -s ssh -l bandit0 -p bandit0 -t 2220`
 
 `python main.py aiur -H ftp.dlptest.com -s ftp -l dlpuser -p rNrKYTX9g7z3RgJRmxWuGHbeu`
 ### Arakaali (spider)
 `python main.py arakaali https://www.inlanefreight.com`
-
-### Limitations
-General
-- All tools are designed for usage on Linux
-
-Chen
-- Less potetent than already existing tools in the same category
-- Susceptible to getting blocked, no rotation of ips/proxy usage
-
-Aiur
-- Performance is lacking and doesn't utilize threading/asynchronous calls
-
-Arakaali
-- Domain restriction logic is primitive
-- Only handles single URL input in its current itteration
-- Default Scrapy user-agent/no ip rotation goin' on, susceptible to just getting blocked
