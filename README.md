@@ -19,7 +19,7 @@
 -L Username wordlist: -L path/to/wordlist
 -p Password: -p password
 -P Password wordlist: -P path/to/wordlist
--t Non-default port: -t X (defaults to 22 with ssh, 21 with ftp when omitted -t flag)
+-t Port: -t X (defaults to 22 for SSH, 21 for FTP when omitted)
 ```
 
 `python main.py aiur -H bandit.labs.overthewire.org -s ssh -l bandit0 -p bandit0 -t 2220`
