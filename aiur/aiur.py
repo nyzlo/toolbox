@@ -36,7 +36,7 @@ def run_aiur(host, service, usernames, passwords, port=None):
 		logging.info("Process interrupted by user input")  
 
 	finally:
-		# Save successful logins
+		# Save successful logins if found
 		if successful_logins:
 			print(f"{Colors.GREEN}\n[Successful logins]{Colors.RESET}")
 			for login in successful_logins:
